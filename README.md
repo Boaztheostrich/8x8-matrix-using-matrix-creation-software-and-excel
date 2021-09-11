@@ -9,7 +9,7 @@ Here is the image I created in the video
 (I actually had to turn off the V-flip)
 https://photos.app.goo.gl/Dep2TPiC1dx...
 
-Kirby and skeleton https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbnNmcTJxdlRydWlzVkpwS0djTmpiY2hvTmpBUXxBQ3Jtc0tuQ0FqMTFKQzZYTjdPQktwTnFMbXdCRmdnSjJVWlE2d1NCU0JxVkhxTlU5aGFFWUZTTGlibDZpNW9VdlVrTHFSRVE2dkdPZGNkMVkxVUMxUWY3a1UweUFBV1paaDhIdDZRNzlUSFFNbEtuLVY5SzF3TQ&q=https%3A%2F%2Fphotos.app.goo.gl%2FaEPj6zVZ2hG3Wasc6
+Kirby and skeleton https://photos.app.goo.gl/k7j7hLYo5WXG1iyi8
 
 Board used in video:  
 https://www.amazon.com/dp/B07T2D4QGJ?...
