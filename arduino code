@@ -1,0 +1,111 @@
+#include <FastLED.h>
+
+#define LED_PIN  5
+
+#define COLOR_ORDER GRB
+#define CHIPSET     WS2811
+
+#define BRIGHTNESS 64
+
+// Params for width and height
+const uint8_t kMatrixWidth = 8;
+const uint8_t kMatrixHeight = 8;
+
+#define NUM_LEDS (kMatrixWidth * kMatrixHeight)
+CRGB leds[ NUM_LEDS ];
+#define LAST_VISIBLE_LED 63
+uint8_t XY (uint8_t x, uint8_t y) {
+  // any out of bounds address maps to the first hidden pixel
+  if ( (x >= kMatrixWidth) || (y >= kMatrixHeight) ) {
+    return (LAST_VISIBLE_LED + 1);
+  }
+
+  const uint8_t XYTable[] = {
+    63,  48,  47,  32,  31,  16,  15,   0,
+    62,  49,  46,  33,  30,  17,  14,   1,
+    61,  50,  45,  34,  29,  18,  13,   2,
+    60,  51,  44,  35,  28,  19,  12,   3,
+    59,  52,  43,  36,  27,  20,  11,   4,
+    58,  53,  42,  37,  26,  21,  10,   5,
+    57,  54,  41,  38,  25,  22,   9,   6,
+    56,  55,  40,  39,  24,  23,   8,   7
+  };
+
+  uint8_t i = (y * kMatrixWidth) + x;
+  uint8_t j = XYTable[i];
+  return j;
+}
+void loop()
+{
+leds[XY(0, 0)]= CRGB(0, 0, 255);
+leds[XY(1, 0)]= CRGB(255, 255, 255);
+leds[XY(2, 0)]= CRGB(255, 255, 255);
+leds[XY(3, 0)]= CRGB(255, 255, 255);
+leds[XY(4, 0)]= CRGB(0, 0, 255);
+leds[XY(5, 0)]= CRGB(0, 0, 255);
+leds[XY(6, 0)]= CRGB(0, 0, 255);
+leds[XY(7, 0)]= CRGB(0, 0, 255);
+leds[XY(0, 1)]= CRGB(0, 0, 255);
+leds[XY(1, 1)]= CRGB(255, 255, 255);
+leds[XY(2, 1)] = CRGB(0, 0, 255);
+leds[XY(3, 1)] = CRGB(255, 255, 255);
+leds[XY(4, 1)] = CRGB(0, 0, 255);
+leds[XY(5, 1)] = CRGB(255, 255, 255);
+leds[XY(6, 1)] = CRGB(255, 255, 255);
+leds[XY(7, 1)] = CRGB(255, 255, 255);
+leds[XY(0, 2)] = CRGB(0, 0, 255);
+leds[XY(1, 2)] = CRGB(255, 255, 255);
+leds[XY(2, 2)] = CRGB(255, 255, 255);
+leds[XY(3, 2)] = CRGB(255, 255, 255);
+leds[XY(4, 2)] = CRGB(0, 0, 255);
+leds[XY(5, 2)] = CRGB(0, 0, 255);
+leds[XY(6, 2)] = CRGB(255, 255, 255);
+leds[XY(7, 2)] = CRGB(0, 0, 255);
+leds[XY(0, 3)] = CRGB(0, 0, 255);
+leds[XY(1, 3)] = CRGB(0, 0, 255);
+leds[XY(2, 3)] = CRGB(0, 0, 255);
+leds[XY(3, 3)] = CRGB(0, 0, 255);
+leds[XY(4, 3)] = CRGB(0, 0, 255);
+leds[XY(5, 3)] = CRGB(255, 255, 255);
+leds[XY(6, 3)] = CRGB(255, 255, 255);
+leds[XY(7, 3)] = CRGB(255, 255, 255);
+leds[XY(0, 4)] = CRGB(0, 0, 255);
+leds[XY(1, 4)] = CRGB(0, 0, 255);
+leds[XY(2, 4)] = CRGB(0, 0, 255);
+leds[XY(3, 4)] = CRGB(0, 0, 255);
+leds[XY(4, 4)] = CRGB(0, 0, 255);
+leds[XY(5, 4)] = CRGB(0, 0, 255);
+leds[XY(6, 4)] = CRGB(0, 0, 255);
+leds[XY(7, 4)] = CRGB(0, 0, 255);
+leds[XY(0, 5)] = CRGB(0, 0, 255);
+leds[XY(1, 5)] = CRGB(255, 255, 255);
+leds[XY(2, 5)] = CRGB(255, 255, 255);
+leds[XY(3, 5)] = CRGB(255, 255, 255);
+leds[XY(4, 5)] = CRGB(0, 0, 255);
+leds[XY(5, 5)] = CRGB(255, 255, 255);
+leds[XY(6, 5)] = CRGB(0, 0, 255);
+leds[XY(7, 5)] = CRGB(255, 255, 255);
+leds[XY(0, 6)] = CRGB(0, 0, 255);
+leds[XY(1, 6)] = CRGB(255, 255, 255);
+leds[XY(2, 6)] = CRGB(0, 0, 255);
+leds[XY(3, 6)] = CRGB(255, 255, 255);
+leds[XY(4, 6)] = CRGB(0, 0, 255);
+leds[XY(5, 6)] = CRGB(255, 255, 255);
+leds[XY(6, 6)] = CRGB(255, 255, 255);
+leds[XY(7, 6)] = CRGB(255, 255, 255);
+leds[XY(0, 7)] = CRGB(0, 0, 255);
+leds[XY(1, 7)] = CRGB(255, 255, 255);
+leds[XY(2, 7)] = CRGB(255, 255, 255);
+leds[XY(3, 7)] = CRGB(255, 255, 255);
+leds[XY(4, 7)] = CRGB(0, 0, 255);
+leds[XY(5, 7)] = CRGB(255, 255, 255);
+leds[XY(6, 7)] = CRGB(0, 0, 255);
+leds[XY(7, 7)] = CRGB(255, 255, 255);
+FastLED.show();
+}
+
+
+void setup() {
+  FastLED.addLeds<CHIPSET, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS).setCorrection(TypicalSMD5050);
+  FastLED.setBrightness( BRIGHTNESS );
+} 
