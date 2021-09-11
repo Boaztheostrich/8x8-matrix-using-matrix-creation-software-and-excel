@@ -16,7 +16,7 @@ https://www.amazon.com/dp/B07T2D4QGJ?...
 
 Spreadsheet for conversion: https://docs.google.com/spreadsheets/...
 
-New better Spreadsheet: https://docs.google.com/spreadsheets/d/e/2PACX-1vQtUluIC1izi9FfYLyy4yqgmnEPssTJ8uuXLN3eJhUmgEL2om10g_Rh4Sq4gev0AFGki7ydBMQkPeSe/pub?output=xlsxps%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2Fe%2F2PACX-1vQtUluIC1izi9FfYLyy4yqgmnEPssTJ8uuXLN3eJhUmgEL2om10g_Rh4Sq4gev0AFGki7ydBMQkPeSe%2Fpubhtml
+New better Spreadsheet: https://docs.google.com/spreadsheets/d/e/2PACX-1vQtUluIC1izi9FfYLyy4yqgmnEPssTJ8uuXLN3eJhUmgEL2om10g_Rh4Sq4gev0AFGki7ydBMQkPeSe/pub?output=xlsx
 
 Reddit discussion of the spreadsheet: https://www.reddit.com/r/excel/comments/pm22fe/how_do_i_replace_text_as_an_function_in_excel/
 
